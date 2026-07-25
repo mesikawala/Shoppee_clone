@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import bcrypt from "bcrypt"; 
+import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 export async function POST(request: Request) {
@@ -25,10 +25,7 @@ export async function POST(request: Request) {
         { status: 401 },
       );
     }
-    const isPasswordValid = await bcrypt.compare(
-      password,
-      user.password
-    );
+    const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
       return NextResponse.json(
         { message: "Email atau Password salah" },
@@ -38,13 +35,13 @@ export async function POST(request: Request) {
 
     const token = jwt.sign(
       {
-      id: user.id,
-      username: user.username,
-      role: user.role
-    },
-    process.env.JWT_SECRET!,
-    { expiresIn: "7d" }
-  );
+        id: user.id,
+        username: user.username,
+        role: user.role,
+      },
+      process.env.JWT_SECRET!,
+      { expiresIn: "7d" },
+    );
 
     const response = NextResponse.json({
       message: "Login Berhasil",
@@ -52,24 +49,26 @@ export async function POST(request: Request) {
         id: user.id,
         username: user.username,
         email: user.email,
-      }
-    })
+      },
+    });
 
     response.cookies.set("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
-      maxAge: 60 * 60 * 24* 7,
+      maxAge: 60 * 60 * 24 * 7,
       path: "/",
-    })
-    return response
-
-  } catch (error){
+    });
+    return response;
+  } catch (error) {
     console.error(error);
-    return NextResponse.json({
-      message: "Terjadi Kesalahan Pada Server"
-    },{
-      status: 500
-    })
+    return NextResponse.json(
+      {
+        message: "Terjadi Kesalahan Pada Server",
+      },
+      {
+        status: 500,
+      },
+    );
   }
 }

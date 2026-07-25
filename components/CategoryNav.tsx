@@ -39,7 +39,7 @@ export default function CategoryNav({
               href={`/products?category=${category.slug}`}
               className="group flex flex-col items-center gap-2 text-center"
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-light text-brand transition-colors group-hover:bg-brand group-hover:text-white">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-400 to-red-500 text-white transition-all group-hover:from-orange-500 group-hover:to-red-600 group-hover:scale-110 shadow-sm">
                 <Icon size={22} strokeWidth={1.75} />
               </span>
               <span className="text-[11px] leading-tight text-ink">

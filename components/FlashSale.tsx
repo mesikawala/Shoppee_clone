@@ -9,7 +9,7 @@ export default function FlashSale({ products }: { products: Product[] }) {
   const endsAt = products[0].flashSaleEndsAt ?? new Date().toISOString();
 
   return (
-    <section className="overflow-hidden rounded bg-gradient-to-r from-flash to-brand">
+    <section className="overflow-hidden rounded bg-gradient-to-r from-orange-500 via-red-500 to-red-600">
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
           <Zap size={20} className="fill-yellow-300 text-yellow-300" />

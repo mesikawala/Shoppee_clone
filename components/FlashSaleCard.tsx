@@ -27,13 +27,13 @@ export default function FlashSaleCard({ product }: { product: Product }) {
         <p className="line-clamp-2 min-h-[34px] text-[12.5px] leading-tight text-ink">
           {product.name}
         </p>
-        <span className="text-base font-bold text-flash">
+        <span className="text-base font-bold text-brand">
           {formatRupiah(product.price)}
         </span>
 
         <div className="relative h-4 w-full overflow-hidden rounded-full bg-brand-light">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-orange-400 to-flash"
+            className="h-full rounded-full bg-gradient-to-r from-brand to-red-700"
             style={{ width: `${percent}%` }}
           />
           <span className="absolute inset-0 flex items-center justify-center text-[9px] font-semibold text-white">

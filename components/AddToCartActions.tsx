@@ -54,7 +54,7 @@ export default function AddToCartActions({ product }: { product: Product }) {
           type="button"
           onClick={handleAddToCart}
           disabled={outOfStock}
-          className="flex items-center gap-2 rounded-sm border border-brand bg-brand-light px-6 py-2.5 text-sm font-semibold text-brand transition-colors hover:bg-brand-100 disabled:cursor-not-allowed disabled:opacity-50"
+          className="flex items-center gap-2 rounded-sm border border-orange-400 bg-gradient-to-r from-orange-100 to-red-100 px-6 py-2.5 text-sm font-semibold text-brand transition-all hover:from-orange-200 hover:to-red-200 disabled:cursor-not-allowed disabled:opacity-50"
         >
           <ShoppingCart size={18} />
           {justAdded ? "Ditambahkan!" : "Masukkan Keranjang"}
@@ -63,7 +63,7 @@ export default function AddToCartActions({ product }: { product: Product }) {
           type="button"
           onClick={handleBuyNow}
           disabled={outOfStock}
-          className="rounded-sm bg-brand px-8 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-50"
+          className="rounded-sm bg-gradient-to-r from-orange-500 via-red-500 to-red-600 px-8 py-2.5 text-sm font-semibold text-white hover:from-orange-600 hover:via-red-600 hover:to-red-700 disabled:cursor-not-allowed disabled:opacity-50 shadow-md transition-all"
         >
           Beli Sekarang
         </button>

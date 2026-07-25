@@ -281,7 +281,7 @@ export default function CheckoutPage() {
             <button
               type="submit"
               disabled={submitting}
-              className="mt-1 rounded-sm bg-brand px-6 py-3 text-sm font-semibold text-white hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-60"
+              className="mt-1 rounded-sm bg-gradient-to-r from-orange-500 via-red-500 to-red-600 px-6 py-3 text-sm font-semibold text-white hover:from-orange-600 hover:via-red-600 hover:to-red-700 disabled:cursor-not-allowed disabled:opacity-60 shadow-md transition-all"
             >
               {submitting ? "Memproses..." : "Buat Pesanan"}
             </button>

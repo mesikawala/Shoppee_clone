@@ -10,16 +10,18 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: "#EE4D2D",
-          dark: "#D7401F",
-          light: "#FFF1EE",
-          50: "#FFF1EE",
-          100: "#FFE1D9",
+          DEFAULT: "#DC2626",
+          dark: "#B91C1C",
+          light: "#FEF2F2",
+          50: "#FEF2F2",
+          100: "#FEE2E2",
         },
-        flash: "#FF424E",
-        savings: "#26AA99",
-        star: "#FFC400",
-        ink: "#1A1A1A",
+        flash: "#EF4444",
+        savings: "#16A34A",
+        star: "#F59E0B",
+        ink: "#1F2937",
+        primary: "#DC2626",
+        secondary: "#1E40AF",
       },
       fontFamily: {
         display: ["var(--font-jakarta)", "sans-serif"],

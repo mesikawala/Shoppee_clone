@@ -5,19 +5,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const SLIDES = [
   {
-    title: "Gajian Sale",
-    subtitle: "Diskon hingga 50% untuk semua kategori elektronik",
-    bg: "from-brand to-brand-dark",
+    title: "Promo Koperasi",
+    subtitle: "Diskon hingga 50% untuk semua kategori produk",
+    bg: "bg-gradient-to-r from-orange-500 via-red-500 to-red-600",
   },
   {
-    title: "Fashion Week Deals",
-    subtitle: "Outfit baru, harga tetap ramah di kantong",
-    bg: "from-orange-400 to-rose-500",
+    title: "Produk Desa Terbaik",
+    subtitle: "Dukung produk lokal kualitas premium",
+    bg: "bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500",
   },
   {
     title: "Gratis Ongkir Se-Indonesia",
     subtitle: "Min. belanja Rp0, berlaku untuk semua toko",
-    bg: "from-rose-500 to-red-600",
+    bg: "bg-gradient-to-br from-red-700 via-red-600 to-orange-600",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function Banner() {
 
   return (
     <div
-      className={`relative overflow-hidden rounded bg-gradient-to-br ${slide.bg} px-6 py-10 text-white sm:px-12 sm:py-16`}
+      className={`relative overflow-hidden rounded ${slide.bg} px-6 py-10 text-white sm:px-12 sm:py-16`}
     >
       <div className="max-w-md animate-fadeIn" key={active}>
         <p className="text-2xl font-bold font-display sm:text-4xl">
